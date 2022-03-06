@@ -113,6 +113,27 @@ public abstract class Metodos extends PilaA {
         }
         return res;
     }
+    
+    // Revisa un String y regresa si hay dos o mas puntos.
+    public static boolean checaPunto(String cadena){
+        boolean resp=false;
+        int i;
+        ArrayList<Character> c = new ArrayList();
+        PilaA<Character> pila = new PilaA();
+        for(i=0;i<cadena.length();i++){ 
+            if(cadena.charAt(i)=='.'){
+                pila.push(cadena.charAt(i));
+            }
+        }
+        while(!pila.isEmpty()){
+            c.add(pila.pop());
+        }
+        if(c.size()>1)
+            resp=false;
+        else
+            resp=true;
+        return resp;
+    }
 
     // Revisa un String y regresa si es un double o no.
     private static boolean numero(String cad) {
