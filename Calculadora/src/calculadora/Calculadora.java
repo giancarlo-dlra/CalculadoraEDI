@@ -5,10 +5,17 @@
 package calculadora;
 
 /**
- *
- * @author junca
+ *@version 2
+ * @author Juan Carlos Uscanga, Giancarlo De la Rosa, Abrahan Martinez, Pedro Yosue, Raul Lopez 
  */
+
+    /**<pre>
+     * Clase Calculadora:
+     * Main del proyecto calculadora
+     * </pre>
+     */
 public class Calculadora {
+
 
     /**
      * @param args the command line arguments

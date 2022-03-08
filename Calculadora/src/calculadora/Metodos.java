@@ -9,12 +9,28 @@ import java.util.ArrayList;
 import java.util.StringTokenizer;
 
 /**
- *
- * @author junca
+ *@version 2
+ * @author Juan Carlos Uscanga, Giancarlo De la Rosa, Abrahan Martinez, Pedro Yosue, Raul Lopez 
  */
+
+
+/**
+<pre>
+* Clase Metodos
+* 
+* Coleccion de metodos utilizados para verificar y confirmar el uso correcto de la sintaxis en la operacion.
+* </pre>
+*/
+
 public abstract class Metodos extends PilaA {
 
-    
+    /**
+     * Metodo que revisa si la sintaxis de la expresion es correcta
+     * Regresa true si la expresion esta correctamente escrita
+     * Regresa false si la expresion tiene un error de sintaxis
+     * @param expresion
+     * @return true o false
+     */
     public static boolean evaluaSintaxis(String expresion) {
         boolean res = true;
         String aux, aux2;
@@ -90,6 +106,11 @@ public abstract class Metodos extends PilaA {
         return res;
     }
     
+    /**
+     * Metodo que evalua el posicionamiento correcto de parentesis en la operacion
+     * @param cad
+     * @return true o false
+     */
     // Balanceo de paréntesis 
     private static boolean balanceoParentesis(String cad) {
         boolean res = true;
@@ -115,7 +136,12 @@ public abstract class Metodos extends PilaA {
         return res;
     }
     
-    // Revisa un String y regresa si hay dos o mas puntos.
+    /**
+     * Metodo que revisa si existen dos o mas puntos seguidos en la operacion
+     * @param cadena
+     * @return true o false
+     */
+   
     public static boolean checaPunto(String cadena){
         boolean resp=false;
         int i;
@@ -136,6 +162,11 @@ public abstract class Metodos extends PilaA {
         return resp;
     }
 
+    /**
+     * Metodo que revisa si el elemtno es un numero tipo double 
+     * @param cad
+     * @return true o false
+     */
     // Revisa un String y regresa si es un double o no.
     private static boolean numero(String cad) {
         boolean res;
@@ -148,7 +179,11 @@ public abstract class Metodos extends PilaA {
         return res;
     }
 
-    // Revisa un String y regresa si es un operador o no 
+    /**
+     * Metodo que revisa si el elemento es un operador matematico
+     * @param cad
+     * @return true o false
+     */
     private static boolean operador(String cad) {
         boolean res;
         char intento = cad.charAt(0);
@@ -166,6 +201,12 @@ public abstract class Metodos extends PilaA {
         return res;
     }
 
+    /**
+     * Metodo que revisa si el elemento es un parentesis derecho
+     * @param cad
+     * @return true o false
+     */
+     
     // Revisa un String y regresa si es un parentesis derecho
     private static boolean parentesisDer(String cad) {
         boolean res = false;
@@ -175,6 +216,12 @@ public abstract class Metodos extends PilaA {
         return res;
     }
 
+    /**
+     * Metodo que revisa si el elemento es un parentesis izquierdo
+
+     * @param cad
+     * @return true o false
+     */
     // Revisa un String y regresa si es un parentesis izquierdo
     private static boolean parentesisIzq(String cad) {
         boolean res = false;

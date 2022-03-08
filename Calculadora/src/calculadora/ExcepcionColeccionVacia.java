@@ -5,9 +5,16 @@
 package calculadora;
 
 /**
- *
- * @author junca
+ * @version 2
+ * @author Juan Carlos Uscanga, Giancarlo De la Rosa, Abrahan Martinez, Pedro Yosue, Raul Lopez 
  */
+
+/**
+ * <pre>
+ * Clase ExcepcionColeccionVacia
+ * </pre>
+ */
+
 public class ExcepcionColeccionVacia extends RuntimeException {
         public ExcepcionColeccionVacia(){
         super("Coleccion Vacia");
