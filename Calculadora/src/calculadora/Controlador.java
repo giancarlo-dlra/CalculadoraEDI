@@ -9,11 +9,25 @@ import java.util.StringTokenizer;
 
 /**
  *
- * @author junca
+ * @author Juan Carlos Uscanga, Giancarlo De la Rosa, Abrahan Martinez, Pedro Yosue, Raul Lopez 
+ */
+
+/**
+ * <pre>
+ * Clase controlador:
+ * 
+ * Clase que consiste en el los metodos con el algoritmo necesario para el funcionamiento de la calculadora
+ * El algoritmo usado, toma una expresion escrita de forma norma y la transforma en infija para poder ser operada utilizando pilas 
+ * </pre>
+ * 
  */
 public class Controlador extends PilaA {
     
-    //clase que 
+    /**
+     * Metodo que transforma la expresion en forma "infija" a postfija para poder se utilizada con los arreglos
+     * @param expresion
+     * @return expresion en postfija
+     */
 public static String infijaAPostfija(String expresion){
         StringBuilder postfija= new StringBuilder();
         StringTokenizer tokenizer = new StringTokenizer(expresion);
@@ -90,6 +104,13 @@ public static String infijaAPostfija(String expresion){
     }
     
     //Metodo para hacer operaciones
+/**
+ * Metodo que da funcionalidad a la operaciones de suma, resta, multiplicacion y division de la calculadora
+ * @param var1
+ * @param var2
+ * @param operador
+ * @return resultado de operacion
+ */
     public static double calcula(double var1, double var2, char operador) {
         double resp=-1;
         switch(operador) {
@@ -109,7 +130,12 @@ public static String infijaAPostfija(String expresion){
         return resp;
     }
     
-   /*
+   /**
+    * @deprecated 
+    * Otra opcion para transformar la expresion a postfija
+    * @param expresion
+    * @return operacion en postfija
+    */
     public static String infijaAPostfija2(String expresion){
         StringBuilder postfija= new StringBuilder();
         StringTokenizer tokenizer = new StringTokenizer(expresion);
@@ -182,7 +208,11 @@ public static String infijaAPostfija(String expresion){
     
 
     }
-    */
+    /**
+     * Metodo que evalua y resuelve la operacion transformada a postfija.
+     * @param expresion
+     * @return resultado de la operacion en postfija
+     */
         //evaluar en postfija
     public static String evaluaPostfija(String expresion){
         PilaADT <String> pila = new PilaA();
@@ -234,7 +264,10 @@ public static String infijaAPostfija(String expresion){
     } 
     
     
-
+/**
+ * Main para probar el funcionamiento de la clase
+ * @param args 
+ */
     public static void main(String[] args) {
         String expresion="(23+¨45)*6.3/70";
         System.out.println("Infija: "+expresion);

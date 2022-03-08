@@ -5,8 +5,14 @@
 package calculadora;
 
 /**
- *
- * @author junca
+ *@version 2
+ * @author Juan Carlos Uscanga, Giancarlo De la Rosa, Abrahan Martinez, Pedro Yosue, Raul Lopez 
+ */
+
+/**
+ * 
+ * Pila de Arreglos 
+ * @param <T> 
  */
 public class PilaA <T> implements PilaADT<T>{
     
